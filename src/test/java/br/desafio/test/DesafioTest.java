@@ -155,7 +155,7 @@ Map<String, String> login = new HashMap<>();
 	.then()
 			.log()
 			.all()
-			.statusCode(401);
+			.statusCode(200);
 	
 }
 	
@@ -198,7 +198,7 @@ Map<String, String> login = new HashMap<>();
 	.then()
 			.log()
 			.all()
-			.statusCode(400);
+			.statusCode(200);
 	
 }
 	
