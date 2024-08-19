@@ -1,0 +1,458 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "id",
+        "title",
+        "description",
+        "category",
+        "price",
+        "discountPercentage",
+        "rating",
+        "stock",
+        "tags",
+        "brand",
+        "sku",
+        "weight",
+        "dimensions",
+        "warrantyInformation",
+        "shippingInformation",
+        "availabilityStatus",
+        "reviews",
+        "returnPolicy",
+        "minimumOrderQuantity",
+        "meta",
+        "images",
+        "thumbnail"
+    ],
+    "properties": {
+        "id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The id Schema",
+            "examples": [
+                1
+            ]
+        },
+        "title": {
+            "type": "string",
+            "default": "",
+            "title": "The title Schema",
+            "examples": [
+                "Essence Mascara Lash Princess"
+            ]
+        },
+        "description": {
+            "type": "string",
+            "default": "",
+            "title": "The description Schema",
+            "examples": [
+                "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula."
+            ]
+        },
+        "category": {
+            "type": "string",
+            "default": "",
+            "title": "The category Schema",
+            "examples": [
+                "beauty"
+            ]
+        },
+        "price": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The price Schema",
+            "examples": [
+                9.99
+            ]
+        },
+        "discountPercentage": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The discountPercentage Schema",
+            "examples": [
+                7.17
+            ]
+        },
+        "rating": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The rating Schema",
+            "examples": [
+                4.94
+            ]
+        },
+        "stock": {
+            "type": "integer",
+            "default": 0,
+            "title": "The stock Schema",
+            "examples": [
+                5
+            ]
+        },
+        "tags": {
+            "type": "array",
+            "default": [],
+            "title": "The tags Schema",
+            "items": {
+                "type": "string",
+                "title": "A Schema",
+                "examples": [
+                    "beauty",
+                    "mascara"
+                ]
+            },
+            "examples": [
+                ["beauty",
+                    "mascara"
+                ]
+            ]
+        },
+        "brand": {
+            "type": "string",
+            "default": "",
+            "title": "The brand Schema",
+            "examples": [
+                "Essence"
+            ]
+        },
+        "sku": {
+            "type": "string",
+            "default": "",
+            "title": "The sku Schema",
+            "examples": [
+                "RCH45Q1A"
+            ]
+        },
+        "weight": {
+            "type": "integer",
+            "default": 0,
+            "title": "The weight Schema",
+            "examples": [
+                2
+            ]
+        },
+        "dimensions": {
+            "type": "object",
+            "default": {},
+            "title": "The dimensions Schema",
+            "required": [
+                "width",
+                "height",
+                "depth"
+            ],
+            "properties": {
+                "width": {
+                    "type": "number",
+                    "default": 0.0,
+                    "title": "The width Schema",
+                    "examples": [
+                        23.17
+                    ]
+                },
+                "height": {
+                    "type": "number",
+                    "default": 0.0,
+                    "title": "The height Schema",
+                    "examples": [
+                        14.43
+                    ]
+                },
+                "depth": {
+                    "type": "number",
+                    "default": 0.0,
+                    "title": "The depth Schema",
+                    "examples": [
+                        28.01
+                    ]
+                }
+            },
+            "examples": [{
+                "width": 23.17,
+                "height": 14.43,
+                "depth": 28.01
+            }]
+        },
+        "warrantyInformation": {
+            "type": "string",
+            "default": "",
+            "title": "The warrantyInformation Schema",
+            "examples": [
+                "1 month warranty"
+            ]
+        },
+        "shippingInformation": {
+            "type": "string",
+            "default": "",
+            "title": "The shippingInformation Schema",
+            "examples": [
+                "Ships in 1 month"
+            ]
+        },
+        "availabilityStatus": {
+            "type": "string",
+            "default": "",
+            "title": "The availabilityStatus Schema",
+            "examples": [
+                "Low Stock"
+            ]
+        },
+        "reviews": {
+            "type": "array",
+            "default": [],
+            "title": "The reviews Schema",
+            "items": {
+                "type": "object",
+                "title": "A Schema",
+                "required": [
+                    "rating",
+                    "comment",
+                    "date",
+                    "reviewerName",
+                    "reviewerEmail"
+                ],
+                "properties": {
+                    "rating": {
+                        "type": "integer",
+                        "title": "The rating Schema",
+                        "examples": [
+                            2,
+                            5
+                        ]
+                    },
+                    "comment": {
+                        "type": "string",
+                        "title": "The comment Schema",
+                        "examples": [
+                            "Very unhappy with my purchase!",
+                            "Not as described!",
+                            "Very satisfied!"
+                        ]
+                    },
+                    "date": {
+                        "type": "string",
+                        "title": "The date Schema",
+                        "examples": [
+                            "2024-05-23T08:56:21.618Z"
+                        ]
+                    },
+                    "reviewerName": {
+                        "type": "string",
+                        "title": "The reviewerName Schema",
+                        "examples": [
+                            "John Doe",
+                            "Nolan Gonzalez",
+                            "Scarlett Wright"
+                        ]
+                    },
+                    "reviewerEmail": {
+                        "type": "string",
+                        "title": "The reviewerEmail Schema",
+                        "examples": [
+                            "john.doe@x.dummyjson.com",
+                            "nolan.gonzalez@x.dummyjson.com",
+                            "scarlett.wright@x.dummyjson.com"
+                        ]
+                    }
+                },
+                "examples": [{
+                    "rating": 2,
+                    "comment": "Very unhappy with my purchase!",
+                    "date": "2024-05-23T08:56:21.618Z",
+                    "reviewerName": "John Doe",
+                    "reviewerEmail": "john.doe@x.dummyjson.com"
+                },
+                {
+                    "rating": 2,
+                    "comment": "Not as described!",
+                    "date": "2024-05-23T08:56:21.618Z",
+                    "reviewerName": "Nolan Gonzalez",
+                    "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+                },
+                {
+                    "rating": 5,
+                    "comment": "Very satisfied!",
+                    "date": "2024-05-23T08:56:21.618Z",
+                    "reviewerName": "Scarlett Wright",
+                    "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+                }]
+            },
+            "examples": [
+                [{
+                    "rating": 2,
+                    "comment": "Very unhappy with my purchase!",
+                    "date": "2024-05-23T08:56:21.618Z",
+                    "reviewerName": "John Doe",
+                    "reviewerEmail": "john.doe@x.dummyjson.com"
+                },
+                {
+                    "rating": 2,
+                    "comment": "Not as described!",
+                    "date": "2024-05-23T08:56:21.618Z",
+                    "reviewerName": "Nolan Gonzalez",
+                    "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+                },
+                {
+                    "rating": 5,
+                    "comment": "Very satisfied!",
+                    "date": "2024-05-23T08:56:21.618Z",
+                    "reviewerName": "Scarlett Wright",
+                    "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+                }]
+            ]
+        },
+        "returnPolicy": {
+            "type": "string",
+            "default": "",
+            "title": "The returnPolicy Schema",
+            "examples": [
+                "30 days return policy"
+            ]
+        },
+        "minimumOrderQuantity": {
+            "type": "integer",
+            "default": 0,
+            "title": "The minimumOrderQuantity Schema",
+            "examples": [
+                24
+            ]
+        },
+        "meta": {
+            "type": "object",
+            "default": {},
+            "title": "The meta Schema",
+            "required": [
+                "createdAt",
+                "updatedAt",
+                "barcode",
+                "qrCode"
+            ],
+            "properties": {
+                "createdAt": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The createdAt Schema",
+                    "examples": [
+                        "2024-05-23T08:56:21.618Z"
+                    ]
+                },
+                "updatedAt": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The updatedAt Schema",
+                    "examples": [
+                        "2024-05-23T08:56:21.618Z"
+                    ]
+                },
+                "barcode": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The barcode Schema",
+                    "examples": [
+                        "9164035109868"
+                    ]
+                },
+                "qrCode": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The qrCode Schema",
+                    "examples": [
+                        "https://dummyjson.com/public/qr-code.png"
+                    ]
+                }
+            },
+            "examples": [{
+                "createdAt": "2024-05-23T08:56:21.618Z",
+                "updatedAt": "2024-05-23T08:56:21.618Z",
+                "barcode": "9164035109868",
+                "qrCode": "https://dummyjson.com/public/qr-code.png"
+            }]
+        },
+        "images": {
+            "type": "array",
+            "default": [],
+            "title": "The images Schema",
+            "items": {
+                "type": "string",
+                "default": "",
+                "title": "A Schema",
+                "examples": [
+                    "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+                ]
+            },
+            "examples": [
+                [
+                    "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"]
+            ]
+        },
+        "thumbnail": {
+            "type": "string",
+            "default": "",
+            "title": "The thumbnail Schema",
+            "examples": [
+                "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+            ]
+        }
+    },
+    "examples": [{
+        "id": 1,
+        "title": "Essence Mascara Lash Princess",
+        "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+        "category": "beauty",
+        "price": 9.99,
+        "discountPercentage": 7.17,
+        "rating": 4.94,
+        "stock": 5,
+        "tags": [
+            "beauty",
+            "mascara"
+        ],
+        "brand": "Essence",
+        "sku": "RCH45Q1A",
+        "weight": 2,
+        "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+        },
+        "warrantyInformation": "1 month warranty",
+        "shippingInformation": "Ships in 1 month",
+        "availabilityStatus": "Low Stock",
+        "reviews": [{
+            "rating": 2,
+            "comment": "Very unhappy with my purchase!",
+            "date": "2024-05-23T08:56:21.618Z",
+            "reviewerName": "John Doe",
+            "reviewerEmail": "john.doe@x.dummyjson.com"
+        },
+        {
+            "rating": 2,
+            "comment": "Not as described!",
+            "date": "2024-05-23T08:56:21.618Z",
+            "reviewerName": "Nolan Gonzalez",
+            "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+        },
+        {
+            "rating": 5,
+            "comment": "Very satisfied!",
+            "date": "2024-05-23T08:56:21.618Z",
+            "reviewerName": "Scarlett Wright",
+            "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+        }],
+        "returnPolicy": "30 days return policy",
+        "minimumOrderQuantity": 24,
+        "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://dummyjson.com/public/qr-code.png"
+        },
+        "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+        ],
+        "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+    }]
+}
