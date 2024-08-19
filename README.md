@@ -5,13 +5,12 @@ Esse arquivo tem objetivo de descrever como executar os testes de integração u
 
 - Java 11
 - IDE Eclipse ou InteliJ
-- maven
+- Framework Rest Assured
+- Framework Junit
 
 
-**Executando os testes**
-Abrir CMD ou Bash para maquinas linux, ir até a pasta raíz do projeto e executar o comando abaixo.
 
-    mvn test
+
 
 **Bugs**
 
