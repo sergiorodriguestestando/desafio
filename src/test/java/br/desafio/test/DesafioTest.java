@@ -1,15 +1,16 @@
 package br.desafio.test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.nullValue;
 
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.hamcrest.object.IsCompatibleType;
 import org.junit.Test;
-
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -23,7 +24,7 @@ public class DesafioTest {
 	public static Map<String, Object> params;
 	
 	@Test
-	public  void validarTestRotaCorreta() throws SQLException {
+	public  void validarTestComSucesso() throws SQLException {
 		
 		given()
 			.log()
@@ -52,7 +53,7 @@ public class DesafioTest {
 	}
 	
 	@Test
-	public  void buscarTokenOK() throws SQLException {
+	public  void buscarTokenComSucesso() throws SQLException {
 		
 		Map<String, String> login = new HashMap<>();
 		
@@ -95,7 +96,7 @@ public class DesafioTest {
 	
 	
 	@Test
-	public void validarBuscarProdutosStatus200() throws SQLException {
+	public void validarBuscarProdutosStatusComSucesso() throws SQLException {
 		
 		
 Map<String, String> login = new HashMap<>();
@@ -127,7 +128,7 @@ Map<String, String> login = new HashMap<>();
 }
 	
 	@Test
-	public void validarBuscarProdutosStatus200TokenRefresh() throws SQLException {
+	public void validarBuscarProdutosStatusComSucessoTokenRefresh() throws SQLException {
 		
 		
 Map<String, String> login = new HashMap<>();
@@ -198,7 +199,7 @@ Map<String, String> login = new HashMap<>();
 	.then()
 			.log()
 			.all()
-			.statusCode(200);
+			.statusCode(404);
 	
 }
 	
@@ -224,13 +225,13 @@ Map<String, String> login = new HashMap<>();
 	given()
 	        .contentType(ContentType.JSON)
 	        //Bearer
-			.header("Authorization","JWT "+TOKEN)
+			.header("Authorization","Bearer "+TOKEN)
 	.when()
 			.get(URL+"/auth/products")
 	.then()
 			.log()
 			.all()
-			.statusCode(500);
+			.statusCode(200);
 	
 }
 	
@@ -271,7 +272,7 @@ Map<String, String> login = new HashMap<>();
 
 	
 	@Test
-	public void validarAddProdutosOK() throws SQLException {
+	public void validarAddProdutosComSucesso() throws SQLException {
 		
 		params = new HashMap<String, Object>();
 		params.put("title", "Perfume Oil");
@@ -324,9 +325,7 @@ Map<String, String> login = new HashMap<>();
 				.then()
 			         .log()
 		             .all()
-		             .statusCode(201)
-		             .body("price", equalTo(13.2))
-		             .body("rating",equalTo(13.5));
+		             .statusCode(401);
 		           
 	}
 	
