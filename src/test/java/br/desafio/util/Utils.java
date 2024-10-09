@@ -11,6 +11,7 @@ public class Utils {
 		int nrFinal = 1000000;
 		int sorteio = aleatorio.nextInt(nrFinal - nrInicial); // Tamanho do intervalo
 		return tipoPedido+sorteio + nrInicial;
+		//testando
 	}
 	
 	
