@@ -1,19 +1,19 @@
 package br.desafio.run;
 
+import br.desafio.test.CarrinhoTest;
+import br.desafio.test.ProdutoTest;
+import br.desafio.test.UsuarioTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
-
-import br.desafio.test.DesafioTest;
-import br.desafio.test.DesafioTestSchema;
-
 
 
 @RunWith(Suite.class)
 @SuiteClasses({
 	
-	DesafioTest.class,
-	DesafioTestSchema.class
+		UsuarioTest.class,
+		ProdutoTest.class,
+		CarrinhoTest.class
 })
 
 public class Run {
