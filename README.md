@@ -1,4 +1,4 @@
-# Desafio Sicreci 
+# Desafio
 Esse arquivo tem objetivo de descrever como executar os testes de integração usando o framework rest assured, com a linguagem de programação JAVA.
 
 **Pré-requisitos**
@@ -7,19 +7,7 @@ Esse arquivo tem objetivo de descrever como executar os testes de integração u
 - IDE Eclipse ou InteliJ
 - Framework Rest Assured
 - Framework Junit
+- Maven
 
-
-
-
-
-**Bugs**
-
-Cenário: BugBuscarProdutosRotaIncorreta
-
-Dado que realize uma requisão para "/auth/product"
-Então o status deve ser "404"
-
-??? Cenário: validarBuscarProdutosStatus200TokenRefresh ???
-Dado que realize uma requisão para "https://dummyjson.com/auth/login"
-E usar o campo "refreshToken" para autenticação
-Então o status deve ser "200" ??
+**Execuções**
+- Localhost = executar o comando mvn test na raiz do projeto
