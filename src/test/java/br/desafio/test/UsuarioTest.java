@@ -145,8 +145,8 @@ public class UsuarioTest {
 
 		Map<String, String> login = new HashMap<>();
 
-		login.put("nome", "Alisson QA 3");
-		login.put("email", "Jammie.Kovacek@hotmail.com");
+		login.put("nome", "Sérgio QA");
+		login.put("email", "beltrano@qa.com.br");
 		login.put("password", "teste");
 		login.put("administrador", "true");
 
