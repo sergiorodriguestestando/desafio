@@ -11,3 +11,4 @@ Esse arquivo tem objetivo de descrever como executar os testes de integração u
 
 **Execuções**
 - Localhost = executar o comando mvn test na raiz do projeto
+- teste
