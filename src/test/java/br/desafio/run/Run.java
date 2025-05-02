@@ -17,9 +17,7 @@ import org.junit.runners.Suite.SuiteClasses;
 })
 
 public class Run {
-	//mais codigo
-	//mais um pouco
-	//teste1
+
 
 
 
