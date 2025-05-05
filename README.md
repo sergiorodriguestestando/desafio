@@ -11,4 +11,5 @@ Esse arquivo tem objetivo de descrever como executar os testes de integração u
 
 **Execuções**
 - Localhost = executar o comando mvn test na raiz do projeto
-- teste
+        caminho run: src/test/java/br/desafio/run
+        caminho cenários: src/test/java/br/desafio/test
